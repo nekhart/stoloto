@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.lotto-dialog *{
+    box-sizing: border-box;
+}
+
+.lotto-dialog>div:last-child {
+    overflow-x: auto;
+}
+
+.lotto-dialog button {
+    text-transform: none;
+}
+
+.lotto-area-control {
+    background-color: #fff;
+}
+
+.lotto-area-control .default,.outlined-btn {
+    margin: 0 0 12px 14px;
+    width: 174px;
+    height: 57px;
+    border-radius: 10px;
+    border-color: #010101;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: 0.8px;
+    text-align: center;
+    color: #000000;
+}
+
+.lotto-dialog .control-btn[class*="contained"] {
+    width: 167px;
+    height: 57px;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    border-radius: 10px;
+    background-image: linear-gradient(to top, #929292, #c7c7c7 13%, #ffffff);
+}
+
+.lotto-dialog .lotto-dialog-paper-component {
+    width: 920px;
+    margin: 20px auto;
+    background: none;
+    box-shadow: none;
+}
+
+.lotto-dialog .lotto-dialog-header {
+    background: none;
+    padding: 0;
+}
+
+/*  надо заменить подобные объявления
+    -  .lotto-dialog .lotto-dialog-content
+    на .lotto-dialog .dialog-content
+ */
+
+
+.lotto-dialog .lotto-dialog-content {
+    background-color: #fe8933;
+    padding: 0;
+}
+
+.tab-container {
+    text-align: center;
+}
+
+.tab-container .tab-rectangle {
+    width: 61px;
+    height: 61px;
+    border-radius: 10px;
+    border: 0;
+    background-blend-mode: multiply;
+    background-image: linear-gradient(to top, #929292, #c7c7c7 13%, #ffffff);
+    padding: 10px 0px;
+    margin-left: 5px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 33px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: 1.7px;
+    text-align: center;
+    color: #000000;
+}
+
+.tab-container .tab-rectangle.active {
+    background-image: linear-gradient(to top, #929292, #c7c7c7 1%, #ffffff), linear-gradient(to bottom, rgba(253, 190, 78, 0.7), rgba(253, 190, 78, 0.7));
+    border: 5px solid #fe8933;
+    padding: 5px 0px;
+}
+
+.tab-container .tab-rectangle.dirty {
+    background-image: linear-gradient(to top, #929292, #c7c7c7 1%, #ffffff), linear-gradient(to bottom, rgba(253, 190, 78, 0.7), rgba(253, 190, 78, 0.7));
+}
+
+.test-story {
+    font-family: 'Poor Story', cursive;
+    font-size: 34px;
+}
+
+.lotto-dialog-content .col-left {
+    float: left;
+    width: 341px;
+    text-align: center;
+    padding: 62px 37px 0px 30px;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+}
+.lotto-dialog-content .col-right {
+    float: right;
+    width: 190px;
+    padding: 15px 0 10px 0;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}
+.lotto-dialog-content .col-center {
+    margin: 0 190px 0 341px;
+}
+
+.lottery-name {
+    font-size: 21px;
+    /*margin: 17px 44px 0 52px;*/
+    color: #FFF;
+}
+
+.lotto-img {
+    margin: 0 0 17px 0;
+}
+
+.lotto-dialog h1 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.lotto-dialog h3 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: normal;
+}
+
+.lotto-dialog .super-prize-header {
+    margin-top: 72px;
+}
+
+.lotto-dialog .super-prize-amount {
+    margin: 14px 0 17px 0;
+}
+
+.lotto-dialog .lotto-description {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 37px;
+}
+
+
+.lottery-rules-btn {
+    margin-top: 25px;
+    width: 104px;
+    height: 39px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #febd4e;
+    font-family: 'PT Sans', sans-serif;
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.lotto-select {
+    text-align: center;
+    border: 0;
+    height: 45px;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    border-radius: 8.3px;
+    background-image: linear-gradient(to top, #929292, #c7c7c7 13%, #ffffff);
+}
+
+.lotto-dialog .lotto-select:after,.lotto-select:before {
+    display: none;
+}
+
+.lotto-select div:first-child div:first-child:focus {
+    background: none;
+}
+
+.lotto-select svg {
+    font-size: 30px;
+    color: #000;
+    margin-top: -3px;
+    margin-right: 5px;
+}
+
+.lotto-stage {
+    text-align: left;
+    margin: 121px 0 0 24px;
+}
+
+.lotto-dialog .lotto-label {
+    font-size: 16px;
+    line-height: 15px;
+    margin: 8px 12px;
+    max-width: 100px;
+}
+
+.lotto-dialog .lotto-label.bet-cost {
+    font-size: 22px;
+    margin-top: 20px;
+    letter-spacing: 1.1px;
+    max-width: 150px;
+}
+
+/*.lotto-select div:first-child {*/
+        /*font-size: 15px;*/
+    /*font-weight: bold;*/
+/*}*/
+
+.lottery-field {
+    width: 389px;
+    height: 255px;
+    background-color: #fff;
+    padding: 11px 12px;
+}
+
+.lottery-field-header {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    width: 389px;
+    height: 48px;
+    background-color: #ffbf42;
+    padding: 18px 0 15px 0;
+    line-height: 15px;
+}
+
+.lottery-field-number {
+    display: inline-block;
+    width: 51px;
+    height: 51px;
+    background-color: #fff;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    letter-spacing: -1.7px;
+    color: #000000;
+    padding: 12px 10px;
+    border-radius: 51px;
+    border: 2px solid #dededd;
+    margin: 5px 0 0 17px;
+    cursor: pointer;
+}
+
+.lottery-field-number.active {
+    background-color: #fcf9e2;
+    border-color: #ff8f12;
+}
+
+.lottery-select .ant-select-selection {
+    padding: 3px 0;
+    height: 40px;
+    background-image: linear-gradient(to top, #929292, #c7c7c7 13%, #ffffff);
+    font-weight: bold;
+    color: #000;
+}
+
+.lottery-select .ant-select-arrow {
+    color: #000;
+    font-size: 17px;
+}
+
+.col-right .material-btn {
+    font-size: 14px;
+    font-family: 'PT-Sans', sans-serif;
+    text-transform: none;
+    font-weight: bold;
+}

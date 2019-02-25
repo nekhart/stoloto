@@ -1,0 +1,46 @@
+import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+import { activeTabDataSelector, changeGameZoneSelect, resetSelection, setRandomNumbers } from '../../ducks/lotto'
+import LotteryField from './lotto-field'
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
+
+
+class LottoArea extends Component {
+
+    onGameZoneSelectChange = ticketIndex => (event) => {
+        console.log(event.target.value);
+        this.props.changeGameZoneSelect({
+            ticketIndex: ticketIndex,
+            selectedValues: event.target.value
+        })
+    }
+
+    render() {
+        return (
+            <Fragment>
+                <div>
+                {
+                    this.props.tabData.lotteryTickets.map((ticket, i) => (
+                        <LotteryField key={i} value={ticket} onChange={this.onGameZoneSelectChange(i)} />
+                    ))
+                }
+                </div>
+                <div className="lotto-area-control">
+                    <Button variant="outlined" className="default lotto-area-control-btn" onClick={this.props.setRandomNumbers}> Случайные числа </Button>
+                    <Button variant="outlined" className="default outlined-btn" onClick={this.props.resetSelection}>
+                        <Icon style={{ fontWeight: 'bold' }}>close</Icon>
+                        Очистить
+                    </Button>
+                </div>
+            </Fragment>
+        )
+    }
+}
+
+export default connect(
+    (state) => ({
+        tabData: activeTabDataSelector(state)
+    }),
+    { changeGameZoneSelect, resetSelection, setRandomNumbers }
+)(LottoArea)
