@@ -55,7 +55,7 @@ export default function reducer(state = initialState, action) {
         case CHANGE_ACTIVE_TAB:
             return {...state, activeTabName: payload.activeTabName}
         case RESET_SELECTION:
-            return {...state, tabsData: initialState.tabsData}
+            return getNewState(state, initialState.tabsData)
         case SET_RANDOM_NUMBERS:
             const tabsData = state.tabsData.map((item) => {
                     if (item.name === state.activeTabName) {
