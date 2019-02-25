@@ -30,7 +30,7 @@ const initialState = {
     tabsData: tabs.map((item) => (
         {
             name: item,
-            lotteryTickets: [ [], [] ],
+            lottoTickets: [ [], [] ],
             isDirty: false,
             isValid: false,
             cost: 0
@@ -45,10 +45,10 @@ export default function reducer(state = initialState, action) {
         case CHANGE_GAME_ZONE_SELECT:
             const newTabsData = state.tabsData.map((item) => {
                     if (item.name === state.activeTabName) {
-                        const newLotteryTickets = item.lotteryTickets.map((ticket, i) => (
+                        const newLottoTickets = item.lottoTickets.map((ticket, i) => (
                                 i === payload.ticketIndex ? payload.selectedValues : ticket
                             ))
-                        return getNewTabState(item, newLotteryTickets)
+                        return getNewTabState(item, newLottoTickets)
                     } else return item
                 })
             return getNewState(state, newTabsData)
@@ -87,14 +87,12 @@ const getNewState = (state, tabsData) => (
     }
 )
 
-const getNewTabState = (tab, lotteryTickets) => {
-    const isValid = lotteryTickets.every(ticket => ticket.length >= 4);
-    console.log(tab, lotteryTickets);
-    console.log(isValid);
+const getNewTabState = (tab, lottoTickets) => {
+    const isValid = lottoTickets.every(ticket => ticket.length >= 4);
     return {
         ...tab,
-        lotteryTickets: lotteryTickets,
-        isDirty: lotteryTickets.some(ticket => !!ticket.length),
+        lottoTickets: lottoTickets,
+        isDirty: lottoTickets.some(ticket => !!ticket.length),
         isValid: isValid,
         cost: isValid ? betCost : 0
     }

@@ -9,8 +9,8 @@ import LottoArea from './lotto-area'
 import LottoTabs from './lotto-tabs'
 import LottoStage from "./lotto-stage";
 
-import './lotto.css'
-import lotteryImg from './4_20x2.png'
+import './lotto-styles.scss'
+import lottoImg from './4_20x2.png'
 
 class PaperComponent extends Component {
     render() {
@@ -57,9 +57,9 @@ class LottoDialog extends Component {
 
                     <DialogContent className="lotto-dialog-content">
                         <div className="col-left">
-                            <img className="lotto-img" src={lotteryImg} alt="" />
+                            <img className="lotto-img" src={lottoImg} alt="" />
                             <h3> «Гослото «4 из 20» </h3>
-                            <button className="lottery-rules-btn">
+                            <button className="lotto-rules-btn">
                                 Правила
                             </button>
                             <h3 className="super-prize-header"> Суперприз </h3>

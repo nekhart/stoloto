@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { activeTabDataSelector, changeGameZoneSelect, resetSelection, setRandomNumbers } from '../../ducks/lotto'
-import LotteryField from './lotto-field'
+import LottoField from './lotto-field'
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 
@@ -9,7 +9,6 @@ import Icon from '@material-ui/core/Icon';
 class LottoArea extends Component {
 
     onGameZoneSelectChange = ticketIndex => (event) => {
-        console.log(event.target.value);
         this.props.changeGameZoneSelect({
             ticketIndex: ticketIndex,
             selectedValues: event.target.value
@@ -21,8 +20,8 @@ class LottoArea extends Component {
             <Fragment>
                 <div>
                 {
-                    this.props.tabData.lotteryTickets.map((ticket, i) => (
-                        <LotteryField key={i} value={ticket} onChange={this.onGameZoneSelectChange(i)} />
+                    this.props.tabData.lottoTickets.map((ticket, i) => (
+                        <LottoField key={i} value={ticket} onChange={this.onGameZoneSelectChange(i)} />
                     ))
                 }
                 </div>

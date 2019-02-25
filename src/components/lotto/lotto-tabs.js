@@ -15,7 +15,6 @@ class LottoTabs extends Component {
     }
 
     onTabBtnClick = (event, tabName) => {
-        console.log(tabName)
         this.props.onTabChange && this.props.onTabChange(tabName)
     }
 

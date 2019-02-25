@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const numbers = new Array(20).fill(0).map((item, i) => i+1)
 
-class LotteryField extends Component {
+class LottoField extends Component {
     static propTypes = {
         value: PropTypes.array
     }
@@ -28,15 +28,15 @@ class LotteryField extends Component {
     render() {
         return (
             <Fragment>
-                <div className="lottery-field-header">
+                <div className="lotto-field-header">
                     Отметьте не менее 4 чисел в первой части поля
                 </div>
-                <div className="lottery-field">
+                <div className="lotto-field">
                     {
                         numbers.map((item) => (
                             <div
                                 key={item}
-                                className={"lottery-field-number" + (this.props.value.indexOf(item) !== -1 ? " active" : "")}
+                                className={"lotto-field-number" + (this.props.value.indexOf(item) !== -1 ? " active" : "")}
                                 onClick={this.onChangeSelection(item)}
                             > {item} </div>
                         ))
@@ -47,4 +47,4 @@ class LotteryField extends Component {
     }
 }
 
-export default LotteryField
+export default LottoField
